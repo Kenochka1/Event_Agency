@@ -9,14 +9,14 @@ const Footer = () => {
       <div className="container-footer">
         <div className="footer-item">
           <h5>ПОЛЕЗНЫЕ ССЫЛКИ</h5>
-          <img src={line} alt="line" />
+          <img id="line" src={line} alt="line" />
           <p id="item1">
             Акции <br /> Оплата <br /> Политика конфедициальности
           </p>
         </div>
         <div className="footer-item">
           <h5>ОПЛАТА</h5>
-          <img src={line} alt="line" />
+          <img id="line" src={line} alt="line" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
             repellendus non vel. Sed, velit qui.
@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
         <div className="footer-item">
           <h5>КОНТАКТЫ</h5>
-          <img src={line} alt="line" />
+          <img id="line" src={line} alt="line" />
 
           <p>
             🕾 996 770 50 30 05 <br /> 🕾 996 995 50 30 05 <br /> 🖂
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
         <div className="footer-item">
           <h5>СОЦИАЛЬНЫЕ СЕТИ</h5>
-          <img src={line} alt="line" />
+          <img id="line" src={line} alt="line" />
 
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.

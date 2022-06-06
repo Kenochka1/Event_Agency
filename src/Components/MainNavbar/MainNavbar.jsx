@@ -1,15 +1,15 @@
 import React from "react";
-import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 import logo from "../../Assets/images/logo.PNG";
 import lupa from "../../Assets/images/lupa.svg";
 import user from "../../Assets/images/user.svg";
 import heart from "../../Assets/images/heart.svg";
-import { NavLink } from "react-router-dom";
+import "./MainNavbar.css";
 
-const Navbar = () => {
+const MainNavbar = () => {
   return (
-    <div className="container-header">
-      <div className="container-navbar">
+    <div className="mainNavbar">
+      <div className="container-navbars">
         <div className="navbar-text">
           <NavLink to="/">
             <p className="navbar-text-p">Главная</p>
@@ -19,7 +19,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink to="/aboutUs">
             <p className="navbar-text-p">О нас</p>
-          </NavLink>
+          </NavLink>{" "}
         </div>
         <img id="logo" src={logo} alt="logo" />
         <div className="navbar-controllers">
@@ -30,12 +30,8 @@ const Navbar = () => {
           <img id="heart" src={heart} alt="heart" />
         </div>
       </div>
-      <div className="container-home">
-        <h3>Cобытие | Ателье | Сервис</h3>
-        <button>НАЧАТЬ СЕЙЧАС</button>
-      </div>
     </div>
   );
 };
 
-export default Navbar;
+export default MainNavbar;

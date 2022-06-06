@@ -1,0 +1,72 @@
+.container-navbars {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: #333333;
+}
+
+.navbar-text {
+  font-family: "Gilroy", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: white;
+  display: flex;
+  margin-left: 150px;
+  margin-right: 175px;
+}
+
+.navbar-text-p {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#logo {
+  width: 240px;
+  height: 170px;
+}
+
+.navbar-controllers {
+  display: flex;
+  align-items: center;
+  margin-left: 130px;
+  color: white;
+}
+
+.navbar-controllers button {
+  width: 150px;
+  height: 32px;
+  border: 1px white solid;
+  color: white;
+  background: #333333;
+  /* border-radius: 10px; */
+  margin-left: 10px;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+}
+
+#lupa {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+#user {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+#heart {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+}
+
+#vhod {
+  margin-left: 30px;
+  font-size: 15px;
+}

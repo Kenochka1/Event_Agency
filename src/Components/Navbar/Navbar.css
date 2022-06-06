@@ -6,12 +6,12 @@ body {
   font-family: "Gilroy", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .container-header {
-  /* background: linear-gradient(
-    0deg,
-    rgba(51, 51, 51, 0.87),
-    rgba(51, 51, 51, 0.87)
-  ); */
   background-image: url("../../Assets/images/bgc.png");
   background-size: cover;
   width: 100%;
@@ -63,7 +63,7 @@ body {
 
 .navbar-controllers button {
   width: 150px;
-  height: 38px;
+  height: 32px;
   border: 1px white solid;
   color: white;
   background: #333333;
@@ -74,16 +74,20 @@ body {
 }
 
 #lupa {
-  font-size: 25px;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
 
 #user {
-  font-size: 25px;
+  width: 20px;
+  height: 20px;
   margin-left: 20px;
 }
 
 #heart {
-  font-size: 40px;
+  width: 20px;
+  height: 20px;
   margin-left: 15px;
 }
 
@@ -126,4 +130,8 @@ body {
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.active {
+  color: rgb(169, 155, 75);
 }
