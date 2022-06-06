@@ -1,0 +1,90 @@
+.container-aboutUs {
+  width: 100%;
+  display: flex;
+  font-family: "Gilroy";
+
+  background: rgb(51, 51, 51);
+  background: linear-gradient(
+    180deg,
+    rgba(51, 51, 51, 1) 0%,
+    rgba(211, 184, 28, 1) 100%
+  );
+  /* background: rgb(255, 255, 255);
+  
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(51, 51, 51, 1) 100% */
+  /* ); */
+}
+
+.aboutUs-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 100px;
+}
+
+.aboutUs-left h3 {
+  color: rgb(169, 155, 75);
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.aboutUs-p {
+  color: white;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.aboutUs-p1 {
+  color: white;
+  font-size: 20px;
+}
+
+.aboutUs-left button {
+  width: 261px;
+  height: 51px;
+  background: #333333;
+  border: 1px solid white;
+  margin-top: 40px;
+
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.aboutUs-right {
+  width: 50%;
+  margin-left: 50px;
+  margin-right: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#wedd {
+  border-radius: 40px;
+  border: 1px #333333 solid;
+  height: 700px;
+}
+
+#ph {
+  color: white;
+  font-weight: 600;
+}
+
+/* aboutus2 */
+
+.aboutsUs-texts {
+  display: flex;
+  justify-content: space-evenly;
+}

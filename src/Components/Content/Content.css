@@ -1,0 +1,57 @@
+.container-content {
+  background-image: url("../../Assets/images/bg-content.png");
+  background-size: cover;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+
+.content-text h6 {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 140%;
+  margin-bottom: 20px;
+}
+
+.container-content h3 {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+  margin-top: 10px;
+}
+
+.container-content p {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  margin-left: 350px;
+  margin-right: 350px;
+  margin-top: 50px;
+}
+
+.container-content button {
+  width: 224px;
+  height: 51px;
+  border: 1px solid #333333;
+  color: #333333;
+  background-color: white;
+  margin-top: 30px;
+
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
