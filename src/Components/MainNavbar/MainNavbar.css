@@ -1,10 +1,14 @@
+* {
+  text-decoration: none !important;
+}
+
 .container-navbars {
-  /* position: absolute; */
   display: flex;
   align-items: center;
   width: 100%;
   height: 150px;
   background-color: #333333;
+  text-decoration: none;
 }
 
 .navbar-text {
@@ -17,11 +21,17 @@
   display: flex;
   margin-left: 150px;
   margin-right: 175px;
+  margin-top: 16px;
 }
 
 .navbar-text-p {
+  color: white;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.active .navbar-text-p {
+  color: rgb(169, 155, 75);
 }
 
 #logo {
@@ -51,7 +61,7 @@
 #lupa {
   width: 20px;
   height: 20px;
-  margin-right: 5px;
+  margin-right: 15px;
 }
 
 #user {
@@ -67,6 +77,19 @@
 }
 
 #vhod {
+  margin-top: 13px;
   margin-left: 30px;
   font-size: 15px;
+}
+
+/* Адаптация */
+@media all and (max-width: 1440px) {
+  .container-navbar {
+    max-width: 1440px;
+  }
+
+  #logo {
+    width: 165px !important;
+    height: 120px !important;
+  }
 }
