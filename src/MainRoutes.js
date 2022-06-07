@@ -12,9 +12,13 @@ const MainRoutes = () => {
     <Routes>
       <Route path="/" element={<Content />} />
       <Route path="/add" element={<AddService />} />
+      {/* doesn't work */}
+
       <Route path="/aboutUs" element={<AboutUs />} />
       <Route path="/edit/:id" element={<EditService />} />
+      {/* doesn't work */}
       <Route path="/list" element={<ServiceList />} />
+      {/* doesn't work */}
       <Route path="/details/:id" element={<ServiceDetails />} />
     </Routes>
   );

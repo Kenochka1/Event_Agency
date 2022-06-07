@@ -4,7 +4,9 @@ import logo from "../../Assets/images/logo.PNG";
 import lupa from "../../Assets/images/lupa.svg";
 import user from "../../Assets/images/user.svg";
 import heart from "../../Assets/images/heart.svg";
+import music from "../../Assets/music/sugar.mp3";
 import { NavLink } from "react-router-dom";
+import { Form, FormControl } from "react-bootstrap";
 
 const Navbar = () => {
   return (
@@ -24,7 +26,17 @@ const Navbar = () => {
         <img id="logo" src={logo} alt="logo" />
         <div className="navbar-controllers">
           <img id="lupa" src={lupa} alt="lupa" />
-          <button>Поиск</button>
+
+          <Form className="search-form d-flex">
+            <FormControl
+              type="search"
+              placeholder="Поиск"
+              className="me-2"
+              aria-label="Search"
+            />
+          </Form>
+
+          {/* <form id="search">Поиск</form> */}
           <p id="vhod">Вход / Регистрация</p>
           <img id="user" src={user} alt="user" />
           <img id="heart" src={heart} alt="heart" />
@@ -33,6 +45,11 @@ const Navbar = () => {
       <div className="container-home">
         <h3>Cобытие | Ателье | Сервис</h3>
         <button>НАЧАТЬ СЕЙЧАС</button>
+        <audio src={music}></audio>
+
+        <audio id="music" controls>
+          <source src={music} type="audio/mpeg" />
+        </audio>
       </div>
     </div>
   );

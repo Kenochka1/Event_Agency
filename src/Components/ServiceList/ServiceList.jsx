@@ -19,7 +19,6 @@ import { serviceContext } from "../Context/ServiceContext";
 import MainNavbar from "../MainNavbar/MainNavbar";
 
 const ServiceList = () => {
-  const { id } = useParams();
   const { getService, service } = useContext(serviceContext);
 
   const [searchParams, setSearchParams] = useSearchParams();
