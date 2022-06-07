@@ -1,0 +1,39 @@
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 10px;
+  margin-top: 40px;
+}
+
+.field1 {
+  margin: 20px 200px !important;
+  width: 700px;
+}
+
+.field2 {
+  margin: 20px 200px !important;
+  width: 700px;
+}
+
+.field3 {
+  margin: 20px 200px !important;
+  width: 700px;
+}
+
+.field4 {
+  margin: 20px 200px !important;
+  width: 700px;
+}
+
+.field5 {
+  margin: 20px 200px !important;
+  width: 700px;
+}
+
+.btnSave {
+  width: 200px;
+  height: 50px;
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}

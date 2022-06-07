@@ -57,7 +57,7 @@ const ServiceContextProvider = ({ children }) => {
   return (
     <serviceContext.Provider
       value={{
-        services: state.service,
+        service: state.service,
         serviceDetails: state.serviceDetails,
         addService,
         getService,
