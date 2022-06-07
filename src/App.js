@@ -12,8 +12,7 @@ const App = () => {
     // check pull request
     <BrowserRouter>
       <ServiceContextProvider>
-        <Navbar />
-        <Content />
+        <MainRoutes />
         <Footer />
       </ServiceContextProvider>
     </BrowserRouter>
