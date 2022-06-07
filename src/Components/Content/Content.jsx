@@ -84,9 +84,9 @@ const Content = () => {
             <h4>Мы в социальных сетях</h4>
           </div>
           <div className="container-video">
-            {/* <video autoPlay loop muted>
+            <video autoPlay loop muted>
               <source id="video" width={700} src={video} type="video/mp4" />
-            </video>{" "} */}
+            </video>{" "}
           </div>
         </div>
         {/* social finish */}

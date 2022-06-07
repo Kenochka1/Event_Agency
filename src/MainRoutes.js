@@ -1,11 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import ServiceList from "./Components/ServiceList/ServiceList.jsx";
 import Content from "./Components/Content/Content.jsx";
 import AboutUs from "./Components/AboutUs/AboutUs.jsx";
-import AddService from "./Components/Admin/AddService/AddService.jsx";
-import EditService from "./Components/Admin/EditService/EditService.jsx";
-import ServiceList from "./Components/ServiceList/ServiceList.jsx";
-import ServiceDetails from "./Components/ServiceDetails/ServiceDetails.jsx";
+import Payment from "./Components/Payment/Payment.jsx";
 
 const MainRoutes = () => {
   return (

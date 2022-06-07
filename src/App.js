@@ -9,12 +9,13 @@ import MainRoutes from "./MainRoutes";
 
 const App = () => {
   return (
+    <div>
     <BrowserRouter>
       <ServiceContextProvider>
         <MainRoutes />
         <Footer />
-      </ServiceContextProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 };
 

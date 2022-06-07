@@ -15,7 +15,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { NavLink, useParams, useSearchParams } from "react-router-dom";
-import { serviceContext } from "../Context/ServiceContext";
 import MainNavbar from "../MainNavbar/MainNavbar";
 
 const ServiceList = () => {
