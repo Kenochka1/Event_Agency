@@ -17,6 +17,7 @@ const MainRoutes = () => {
       <Route path="/edit/:id" element={<EditService />} />
       <Route path="/list" element={<ServiceList />} />
       <Route path="/details/:id" element={<ServiceDetails />} />
+      <Route path="/payment" element={<Payment />} />
     </Routes>
   );
 };
