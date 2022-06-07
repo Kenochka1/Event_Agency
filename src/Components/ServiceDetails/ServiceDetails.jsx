@@ -2,9 +2,9 @@ import React from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { NavLink, useParams } from "react-router-dom";
-import { serviceContext } from "../Context/ServiceContext";
 import BrushIcon from "@mui/icons-material/Brush";
 import RestoreFromTrashIcon from "@mui/icons-material/RestoreFromTrash";
+import { serviceContext } from "../Context/ServiceContext";
 
 const ServiceDetails = () => {
   const { serviceDetails, getServiceDetails, deleteService } =

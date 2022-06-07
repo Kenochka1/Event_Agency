@@ -9,12 +9,28 @@
       "id": 1
     },
     {
-      "title": "кольцо Cartier",
+      "title": "кольцо Cartie",
       "type": "обручальные кольца",
       "description": "кольцо обручальное для жениха и невесты",
       "price": "80000000",
       "img": "https://www.cartier.com/variants/images/1647597277058376/img1/w960.jpg",
       "id": 2
+    },
+    {
+      "title": "hello",
+      "type": "ghg",
+      "description": "hg",
+      "price": "234",
+      "img": "gh",
+      "id": 3
+    },
+    {
+      "title": "kljlk",
+      "type": "jklj",
+      "description": "kljkl",
+      "price": "890",
+      "img": "jlkj",
+      "id": 4
     }
   ]
 }

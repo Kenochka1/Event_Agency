@@ -1,7 +1,5 @@
+import React, { useContext, useState } from "react";
 import { Button, TextField } from "@mui/material";
-import React from "react";
-import { useState } from "react";
-import { useContext } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { serviceContext } from "../../Context/ServiceContext";
 import "./AddService.css";
@@ -14,7 +12,7 @@ const initObj = {
   img: "",
 };
 const AddService = () => {
-  const { addService } = useContext(serviceContext);
+  const { addService1 } = useContext(serviceContext);
   const [inpValues, setInpValues] = useState(initObj);
 
   const alertToastify = () => {
@@ -51,7 +49,7 @@ const AddService = () => {
       return;
     }
     e.preventDefault();
-    addService(inpValues);
+    addService1(inpValues);
     clearInput();
   };
   return (
