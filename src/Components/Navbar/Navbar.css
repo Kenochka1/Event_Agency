@@ -150,11 +150,11 @@ a {
 }
 
 .active {
-  color: rgb(169, 155, 75);
+  color: rgb(169, 155, 75) !important;
 }
 
 .active:hover {
-  color: rgb(169, 155, 75);
+  color: rgb(169, 155, 75) !important;
 }
 
 /* Адаптация */

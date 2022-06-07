@@ -1,3 +1,7 @@
+* {
+  text-decoration: none !important;
+}
+
 .container-navbars {
   display: flex;
   align-items: center;
@@ -21,8 +25,13 @@
 }
 
 .navbar-text-p {
+  color: white;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.active .navbar-text-p {
+  color: rgb(169, 155, 75);
 }
 
 #logo {
