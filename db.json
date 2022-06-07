@@ -1,0 +1,20 @@
+{
+  "service": [
+    {
+      "title": "ddd",
+      "type": "dd",
+      "description": "ddd",
+      "price": "-2",
+      "img": "ddd",
+      "id": 1
+    },
+    {
+      "title": "кольцо Cartier",
+      "type": "обручальные кольца",
+      "description": "кольцо обручальное для жениха и невесты",
+      "price": "80000000",
+      "img": "https://www.cartier.com/variants/images/1647597277058376/img1/w960.jpg",
+      "id": 2
+    }
+  ]
+}
