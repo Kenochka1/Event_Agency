@@ -26,7 +26,7 @@ const ServiceContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
   const location = useLocation();
-  console.log(location.search);
+  // console.log(location.search);
 
   const addService = async (newService) => {
     await axios.post(API, newService);

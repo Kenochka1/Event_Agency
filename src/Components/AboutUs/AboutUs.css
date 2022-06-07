@@ -105,7 +105,7 @@
 
 .aboutUs-text-container {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
 
 .aboutsUs-design h5 {
