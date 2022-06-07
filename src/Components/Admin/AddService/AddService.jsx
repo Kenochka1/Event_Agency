@@ -12,7 +12,7 @@ const initObj = {
   img: "",
 };
 const AddService = () => {
-  const { addService } = useContext(serviceContext);
+  const { addService1 } = useContext(serviceContext);
   const [inpValues, setInpValues] = useState(initObj);
 
   const alertToastify = () => {
@@ -49,7 +49,7 @@ const AddService = () => {
       return;
     }
     e.preventDefault();
-    addService(inpValues);
+    addService1(inpValues);
     clearInput();
   };
   return (

@@ -28,7 +28,7 @@ const ServiceContextProvider = ({ children }) => {
   const location = useLocation();
   // console.log(location.search);
 
-  const addService = async (newService) => {
+  const addService1 = async (newService) => {
     await axios.post(API, newService);
   };
   const getService = async () => {
@@ -62,7 +62,7 @@ const ServiceContextProvider = ({ children }) => {
       value={{
         service: state.service,
         serviceDetails: state.serviceDetails,
-        addService,
+        addService1,
         getService,
         getServiceDetails,
         deleteService,
