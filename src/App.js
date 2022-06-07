@@ -10,7 +10,6 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        {/* <MainNavbar /> */}
         <MainRoutes />
         <Footer />
       </BrowserRouter>

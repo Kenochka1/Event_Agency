@@ -3,6 +3,7 @@ import { Carousel } from "react-bootstrap";
 import MainNavbar from "../MainNavbar/MainNavbar";
 import "./AboutUs.css";
 import wedd from "../../Assets/images/wedd.jpeg";
+import linelong from "../../Assets/images/linelong.png";
 
 const AboutUs = () => {
   return (
@@ -68,33 +69,44 @@ const AboutUs = () => {
       {/* ABOUTUS CONTAINER 2 START */}
       <div className="container2-aboutUs">
         <h2>КОНТАКТЫ</h2>
-        <div className="aboutUs-texts">
+        <div className="aboutUs-text-container">
           <div className="aboutsUs-design">
             <h5>Головной офис</h5>
             <p>
-              Табышалиева 29 <br /> Линейная 67
+              ۩ Табышалиева 29 <br /> ۩ Линейная 67
             </p>
           </div>
 
           <div className="aboutsUs-design">
             <h5>Телефоны</h5>
             <p>
-              996 770 503005 <br /> 996 995 503005
+              ☏ 996 770 503005 <br /> ☏ 996 995 503005
             </p>
           </div>
 
           <div className="aboutsUs-design">
             <h5>Email</h5>
             <p>
-              sultanaliev228@gmail.com <br /> ilika9679@gmail.com{" "}
+              🖂 sultanaliev228@gmail.com <br /> 🖂 ilika9679@gmail.com
             </p>
           </div>
           <div className="aboutsUs-design">
             <h5>Доп адреса</h5>
             <p>
-              Табышалиева 29 <br /> Линейная 67
+              ۩ Табышалиева 29 <br /> ۩ Линейная 67
             </p>
           </div>
+        </div>
+        <img id="linelong" src={linelong} alt="linelong" />
+        <div>
+          <iframe
+            id="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2055.0180325627275!2d74.58547838383201!3d42.87153125058064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec8241b52669f%3A0xb8b43841ad54c50b!2zMjkg0YPQu9C40YbQsCDQotCw0LHRi9GI0LDQu9C40LXQstCwLCDQkdC40YjQutC10Lo!5e0!3m2!1sru!2skg!4v1654518461911!5m2!1sru!2skg"
+            width={1200}
+            height={600}
+            style={{ border: 0 }}
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
     </>
