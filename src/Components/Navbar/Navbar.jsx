@@ -7,6 +7,8 @@ import heart from "../../Assets/images/heart.svg";
 import music from "../../Assets/music/sugar.mp3";
 import { NavLink } from "react-router-dom";
 import { Form, FormControl } from "react-bootstrap";
+import LiveSearch from "../LiveSearch/LiveSearch";
+import { Button } from "@mui/material";
 
 const Navbar = () => {
   return (
@@ -22,20 +24,23 @@ const Navbar = () => {
           <NavLink to="/aboutUs">
             <p className="navbar-text-p">О нас</p>
           </NavLink>
+          <NavLink to="/add">
+            <p className="navbar-text-p">Добавить</p>
+          </NavLink>
         </div>
         <img id="logo" src={logo} alt="logo" />
         <div className="navbar-controllers">
           <img id="lupa" src={lupa} alt="lupa" />
 
-          <Form className="search-form d-flex">
+          {/* <Form className="search-form d-flex">
             <FormControl
               type="search"
               placeholder="Поиск"
               className="me-2"
               aria-label="Search"
             />
-          </Form>
-
+          </Form> */}
+          <LiveSearch />
           {/* <form id="search">Поиск</form> */}
           <p id="vhod">Вход / Регистрация</p>
           <img id="user" src={user} alt="user" />

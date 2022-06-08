@@ -6,6 +6,7 @@ import user from "../../Assets/images/user.svg";
 import heart from "../../Assets/images/heart.svg";
 import "./MainNavbar.css";
 import { Form, FormControl } from "react-bootstrap";
+import LiveSearch from "../LiveSearch/LiveSearch";
 
 const MainNavbar = () => {
   return (
@@ -25,14 +26,15 @@ const MainNavbar = () => {
         <img id="logo" src={logo} alt="logo" />
         <div className="navbar-controllers">
           <img id="lupa" src={lupa} alt="lupa" />
-          <Form className="search-form d-flex">
+          {/* <Form className="search-form d-flex">
             <FormControl
               type="search"
               placeholder="Поиск"
               className="me-2"
               aria-label="Search"
             />
-          </Form>{" "}
+          </Form>{" "} */}
+          <LiveSearch />
           <p id="vhod">Вход / Регистрация</p>
           <img id="user" src={user} alt="user" />
           <img id="heart" src={heart} alt="heart" />
