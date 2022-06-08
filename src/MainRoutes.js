@@ -7,17 +7,19 @@ import Payment from "./Components/Payment/Payment.jsx";
 import AddService from "./Components/Admin/AddService/AddService.jsx";
 import EditService from "./Components/Admin/EditService/EditService.jsx";
 import ServiceDetails from "./Components/ServiceDetails/ServiceDetails.jsx";
+import LoginLogout from "./Components/Auth/LoginLogout.jsx";
 
 const MainRoutes = () => {
   return (
     <Routes>
+      <Route path="/login" element={<LoginLogout />} />
       <Route path="/" element={<Content />} />
       <Route path="/add" element={<AddService />} />
       <Route path="/aboutUs" element={<AboutUs />} />
       <Route path="/edit/:id" element={<EditService />} />
       <Route path="/list" element={<ServiceList />} />
       <Route path="/details/:id" element={<ServiceDetails />} />
-      <Route path="/payment" element={<Payment />} />
+      {/* <Route path="/payment" element={<Payment />} /> */}
     </Routes>
   );
 };
