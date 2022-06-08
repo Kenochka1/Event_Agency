@@ -17,6 +17,7 @@ import { useContext } from "react";
 import { NavLink, useParams, useSearchParams } from "react-router-dom";
 import { serviceContext } from "../Context/ServiceContext";
 import MainNavbar from "../MainNavbar/MainNavbar";
+import ReactPaginate from "react-paginate";
 
 const ServiceList = () => {
   const { getService, service } = useContext(serviceContext);
@@ -54,6 +55,18 @@ const ServiceList = () => {
     }
   }, [type, searchParams]);
 
+  // ! Paginate======================
+  const [pageNumber, setPageNumber] = useState(0);
+  const serviceLimit = 10;
+  const serviceVisited = pageNumber * serviceLimit;
+
+  const pageCount = Math.ceil(service.length / serviceLimit);
+
+  let sliceTwoIndex = serviceVisited + serviceLimit;
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+
   return (
     <>
       <MainNavbar />
@@ -68,33 +81,41 @@ const ServiceList = () => {
           }}
         >
           {service
-            ? service.map((item) => (
-                <Grid xs={3.5} mb={7}>
-                  <Card sx={{ maxWidth: 345 }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image={item.img}
-                        alt="green iguana"
+            ? service.slice(serviceVisited, sliceTwoIndex).map((item) => (
+                <div>
+                  <div>
+                    <div
+                      className="card1 text-center m-4"
+                      style={{ width: "18rem", height: "350px" }}
+                    >
+                      <img
+                        src={item.img}
+                        height="200"
+                        className="card-img-top"
+                        alt={item.title}
                       />
-                      <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                          {item.title}
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <NavLink to={`/details/${item.id}`}>
-                        <Button size="small" color="primary">
-                          Подробнее
-                        </Button>
-                      </NavLink>
-                    </CardActions>
-                  </Card>
-                </Grid>
+                      <div className="card-body">
+                        <h5 className="card-title">{item.title}</h5>
+                        <NavLink to={`/details/${item.id}`}>
+                          <Button className="topicListLook">Просмотреть</Button>
+                        </NavLink>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               ))
             : null}
+          <ReactPaginate
+            previousLabel={"Назад"}
+            nextLabel={"Вперед"}
+            pageCount={pageCount}
+            containerClassName={"paginationBttns"}
+            previousLinkClassName={"previousBttn"}
+            nextLinkClassName={"nextBttn"}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"paginationActive"}
+            onPageChange={changePage}
+          />
         </Box>
       </>
     </>

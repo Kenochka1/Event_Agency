@@ -5,7 +5,6 @@ import lupa from "../../Assets/images/lupa.svg";
 import user from "../../Assets/images/user.svg";
 import heart from "../../Assets/images/heart.svg";
 import "./MainNavbar.css";
-import { Form, FormControl } from "react-bootstrap";
 import LiveSearch from "../LiveSearch/LiveSearch";
 
 const MainNavbar = () => {
@@ -22,6 +21,9 @@ const MainNavbar = () => {
           <NavLink to="/aboutUs">
             <p className="navbar-text-p">О нас</p>
           </NavLink>{" "}
+          <NavLink to="/add">
+            <p className="navbar-text-p">Добавить</p>
+          </NavLink>
         </div>
         <img id="logo" src={logo} alt="logo" />
         <div className="navbar-controllers">

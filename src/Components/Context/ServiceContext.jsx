@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 export const serviceContext = createContext();
 
 const API = "http://localhost:8000/service";
+let totalPages;
 
 const INIT_STATE = {
   service: [],
@@ -22,6 +23,16 @@ const reducer = (state = INIT_STATE, action) => {
   }
 };
 
+// Переменная для пагинации
+let page = 1;
+
+const getTotalService = async () => {
+  const { data } = await axios.get(API);
+  totalPages = Math.ceil(data.length / 3);
+};
+
+// функция пагинации
+
 const ServiceContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
@@ -31,12 +42,14 @@ const ServiceContextProvider = ({ children }) => {
   const addService1 = async (newService) => {
     await axios.post(API, newService);
   };
+
   const getService = async () => {
     const { data } = await axios.get(`${API}${location.search}`);
     dispatch({
       type: "GET_SERVICE",
       payload: data,
     });
+    getTotalService();
   };
 
   const getServiceDetails = async (id) => {
