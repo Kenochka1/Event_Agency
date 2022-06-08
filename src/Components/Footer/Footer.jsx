@@ -27,7 +27,8 @@ const Footer = () => {
           <h5>ОПЛАТА</h5>
           <img id="line" src={line} alt="line" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi{" "}
+            <br />
             <NavLink to="/payment">
               <img id="visa" src={visa} alt="visa" />
               <img id="paypal" src={paypal} alt="paypal" />

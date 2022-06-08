@@ -21,6 +21,7 @@ const Content = () => {
           <div className="advice-container-card">
             <div className="advice-cards">
               <Card
+                id="cards-content"
                 style={{
                   width: "18rem",
                   height: "300px",
@@ -38,6 +39,7 @@ const Content = () => {
             </div>
             <div className="advice-cards">
               <Card
+                id="cards-content"
                 style={{
                   width: "18rem",
                   height: "300px",
@@ -55,6 +57,7 @@ const Content = () => {
             </div>
             <div className="advice-cards">
               <Card
+                id="cards-content"
                 style={{
                   width: "18rem",
                   height: "300px",
@@ -86,7 +89,7 @@ const Content = () => {
           <div className="container-video">
             <video autoPlay loop muted>
               <source id="video" width={700} src={video} type="video/mp4" />
-            </video>{" "}
+            </video>
           </div>
         </div>
         {/* social finish */}

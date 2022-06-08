@@ -7,6 +7,7 @@ import RestoreFromTrashIcon from "@mui/icons-material/RestoreFromTrash";
 import { serviceContext } from "../Context/ServiceContext";
 import { Navbar } from "react-bootstrap";
 import MainNavbar from "../MainNavbar/MainNavbar";
+import "./ServiceDetails.css";
 
 const ServiceDetails = () => {
   const { serviceDetails, getServiceDetails, deleteService } =
