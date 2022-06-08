@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import { Filter } from "@mui/icons-material";
+=======
 import {
   Button,
   Card,
@@ -8,6 +11,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+>>>>>>> 9bffb572bbc16fef75bff6e778258834474f717a
 import { Box } from "@mui/system";
 import React from "react";
 import { useState } from "react";
@@ -17,10 +21,14 @@ import { NavLink, useParams, useSearchParams } from "react-router-dom";
 import { serviceContext } from "../Context/ServiceContext";
 import MainNavbar from "../MainNavbar/MainNavbar";
 import ReactPaginate from "react-paginate";
+<<<<<<< HEAD
+import "./ServiceList.css";
+=======
 import Filter from "../Filter/Filter";
 
 const max = 250000;
 const min = 10;
+>>>>>>> 9bffb572bbc16fef75bff6e778258834474f717a
 
 const ServiceList = () => {
   const { getService, service } = useContext(serviceContext);
@@ -101,22 +109,29 @@ const ServiceList = () => {
         >
           {service
             ? service.slice(serviceVisited, sliceTwoIndex).map((item) => (
+                // <div className="container-serviceList">
                 <div>
-                  <div>
-                    <div
-                      className="card1 text-center m-4"
-                      style={{ width: "18rem", height: "350px" }}
-                    >
+                  <div
+                    className="card1 text-center m-4"
+                    style={{ width: "18rem", height: "250px" }}
+                  >
+                    <div class="hover-effect-btn">
                       <img
                         src={item.img}
-                        height="200"
+                        height="220"
+                        width="290"
                         className="card-img-top"
                         alt={item.title}
                       />
-                      <div className="card-body">
-                        <h5 className="card-title">{item.title}</h5>
+                      <h6 className="title2">{item.type}</h6>
+                      <h5 className="title">{item.title} </h5>
+
+                      <div class="overlay"></div>
+                      <div class="button">
                         <NavLink to={`/details/${item.id}`}>
-                          <Button className="topicListLook">Просмотреть</Button>
+                          <button className="topicListLook">
+                            Просмотреть{" "}
+                          </button>
                         </NavLink>
                       </div>
                     </div>
@@ -124,6 +139,8 @@ const ServiceList = () => {
                 </div>
               ))
             : null}
+        </Box>
+        <div>
           <ReactPaginate
             previousLabel={"Назад"}
             nextLabel={"Вперед"}
@@ -135,7 +152,7 @@ const ServiceList = () => {
             activeClassName={"paginationActive"}
             onPageChange={changePage}
           />
-        </Box>
+        </div>
       </>
     </>
   );
