@@ -3,6 +3,7 @@ import React from "react";
 import { useEffect } from "react";
 import { createContext } from "react";
 import { useState } from "react";
+import fire from "../../fire";
 
 export const authContext = createContext();
 const AuthContextProvider = ({ children }) => {
@@ -83,7 +84,7 @@ const AuthContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <authContextProvider
+    <authContext.Provider
       value={{
         email,
         user,
@@ -100,7 +101,7 @@ const AuthContextProvider = ({ children }) => {
       }}
     >
       {children}
-    </authContextProvider>
+    </authContext.Provider>
   );
 };
 

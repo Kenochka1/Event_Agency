@@ -32,17 +32,10 @@ const Navbar = () => {
         <div className="navbar-controllers">
           <img id="lupa" src={lupa} alt="lupa" />
 
-          {/* <Form className="search-form d-flex">
-            <FormControl
-              type="search"
-              placeholder="Поиск"
-              className="me-2"
-              aria-label="Search"
-            />
-          </Form> */}
           <LiveSearch />
-          {/* <form id="search">Поиск</form> */}
-          <p id="vhod">Вход / Регистрация</p>
+          <NavLink to="/login">
+            <p id="vhod">Вход / Регистрация</p>
+          </NavLink>
           <img id="user" src={user} alt="user" />
           <img id="heart" src={heart} alt="heart" />
         </div>

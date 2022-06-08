@@ -26,14 +26,7 @@ const MainNavbar = () => {
         <img id="logo" src={logo} alt="logo" />
         <div className="navbar-controllers">
           <img id="lupa" src={lupa} alt="lupa" />
-          {/* <Form className="search-form d-flex">
-            <FormControl
-              type="search"
-              placeholder="Поиск"
-              className="me-2"
-              aria-label="Search"
-            />
-          </Form>{" "} */}
+
           <LiveSearch />
           <p id="vhod">Вход / Регистрация</p>
           <img id="user" src={user} alt="user" />
