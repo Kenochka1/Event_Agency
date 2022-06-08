@@ -67,7 +67,7 @@ a {
   line-height: 150%;
   color: white;
   display: flex;
-  margin-left: 150px;
+  margin-left: 130px;
   margin-right: 175px;
   margin-top: 16px;
   text-decoration: none !important;
@@ -265,7 +265,87 @@ a {
   }
 }
 
-.container-content p {
-  margin-left: 70px !important;
-  margin-right: 70px !important;
+@media all and (max-width: 768px) {
+  .container-header {
+    width: 768px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 380px;
+  }
+
+  .container-home h3 {
+    font-size: 20px;
+  }
+
+  .container-home button {
+    width: 180px;
+    height: 35px;
+    color: white;
+    border: 1px white solid;
+    background-color: #333333;
+    font-weight: 500;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .container-home {
+    margin-top: 200px;
+  }
+
+  #vhod {
+    font-size: 13px !important;
+    margin-top: 0 !important;
+  }
+
+  #heart {
+    display: none;
+  }
+
+  #user {
+    display: none;
+  }
+
+  #lupa {
+    display: none;
+  }
+
+  #logo {
+    margin-left: 88px;
+    margin-right: 52px;
+  }
+
+  .form-control {
+    font-size: 13px !important;
+  }
+
+  #music {
+    margin-top: 20px;
+    width: 180px;
+    height: 40px;
+  }
+  .navbar-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-controllers {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 425px) {
+  /* .navbar-controllers {
+    display: none;
+  } */
+
+  #logo {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }

@@ -16,7 +16,7 @@ const Navbar = () => {
           <NavLink to="/">
             <p className="navbar-text-p">Главная</p>
           </NavLink>
-          <NavLink to="/add">
+          <NavLink to="/list">
             <p className="navbar-text-p">Услуги</p>
           </NavLink>
           <NavLink to="/aboutUs">

@@ -19,7 +19,7 @@
   line-height: 150%;
   color: white;
   display: flex;
-  margin-left: 150px;
+  margin-left: 130px;
   margin-right: 175px;
   margin-top: 16px;
 }
@@ -35,8 +35,8 @@
 }
 
 #logo {
-  width: 240px;
-  height: 170px;
+  width: 17%;
+  height: auto;
 }
 
 .navbar-controllers {
@@ -83,13 +83,3 @@
 }
 
 /* Адаптация */
-@media all and (max-width: 1440px) {
-  .container-navbar {
-    max-width: 1440px;
-  }
-
-  #logo {
-    width: 165px !important;
-    height: 120px !important;
-  }
-}

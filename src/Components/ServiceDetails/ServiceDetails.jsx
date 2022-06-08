@@ -5,6 +5,8 @@ import { NavLink, useParams } from "react-router-dom";
 import BrushIcon from "@mui/icons-material/Brush";
 import RestoreFromTrashIcon from "@mui/icons-material/RestoreFromTrash";
 import { serviceContext } from "../Context/ServiceContext";
+import MainNavbar from "../MainNavbar/MainNavbar";
+import "./ServiceDetails.css";
 
 const ServiceDetails = () => {
   const { serviceDetails, getServiceDetails, deleteService } =
@@ -15,6 +17,7 @@ const ServiceDetails = () => {
   }, []);
   return (
     <>
+      <MainNavbar />
       <div style={{ display: "flex" }}>
         <div className="previewList">
           <img
