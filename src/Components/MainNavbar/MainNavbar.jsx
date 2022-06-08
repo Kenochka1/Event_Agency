@@ -30,7 +30,9 @@ const MainNavbar = () => {
           <img id="lupa" src={lupa} alt="lupa" />
 
           <LiveSearch />
-          <p id="vhod">Вход / Регистрация</p>
+          <NavLink to="/login">
+            <p id="vhod">Вход / Регистрация</p>
+          </NavLink>
           <img id="user" src={user} alt="user" />
           <img id="heart" src={heart} alt="heart" />
         </div>

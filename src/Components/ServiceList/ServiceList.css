@@ -1,0 +1,144 @@
+.card1 {
+  border-radius: 10px;
+  color: white;
+}
+
+.card-body {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  align-items: center;
+  color: #333;
+}
+
+.card-img-top {
+  /* border-radius: 10px; */
+  /* border: 2px double #333; Рамка */
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.topicListLook {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Настройка цвета и прозрачности для блока с заголовком */
+  transition: background 0.5s ease;
+  color: white;
+  margin-bottom: 10px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  display: none;
+}
+
+/* ! HOVER EFFECT */
+
+.hover-effect-btn {
+  position: relative;
+  width: 100%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Настройка цвета и прозрачности для блока с заголовком */
+  transition: background 0.5s ease;
+}
+.hover-effect-btn:hover .overlay {
+  display: block;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.9
+  ); /* Настройка цвета и прозрачности для блока с заголовком при наведении */
+}
+
+.title2 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 25px; /* Отступ сверху */
+  text-align: center;
+  /* text-transform: uppercase; Заглавные буквы */
+  color: rgb(201, 201, 201); /* Цвет заголовка */
+  z-index: 1;
+  transition: top 0.5s ease;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 140%;
+}
+
+.title {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 60px; /* Отступ сверху */
+  text-align: center;
+  color: white; /* Цвет заголовка */
+  z-index: 1;
+  transition: top 0.5s ease;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.hover-effect-btn:hover .title {
+  top: 40%; /* Отступ сверху при наведении */
+}
+
+.hover-effect-btn:hover .title2 {
+  top: 25%; /* Отступ сверху при наведении */
+  display: none;
+}
+
+.button {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 65%; /* Отступ сверху */
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.button a {
+  padding: 15px 40px; /* Отступ */
+  text-align: center;
+  /* background: #ff921e; Цвет кнопки */
+  color: white; /* Цвет текста */
+  border: 1px solid white; /* Ширина, стиль и цвет границы */
+  z-index: 1;
+}
+.hover-effect-btn:hover .button {
+  opacity: 1;
+}
