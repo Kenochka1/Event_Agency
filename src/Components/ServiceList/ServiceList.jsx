@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 import { Filter } from "@mui/icons-material";
+=======
+import {
+  Button,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Grid,
+  Typography,
+} from "@mui/material";
+>>>>>>> 9bffb572bbc16fef75bff6e778258834474f717a
 import { Box } from "@mui/system";
 import React from "react";
 import { useState } from "react";
@@ -8,24 +21,36 @@ import { NavLink, useParams, useSearchParams } from "react-router-dom";
 import { serviceContext } from "../Context/ServiceContext";
 import MainNavbar from "../MainNavbar/MainNavbar";
 import ReactPaginate from "react-paginate";
+<<<<<<< HEAD
 import "./ServiceList.css";
+=======
+import Filter from "../Filter/Filter";
+
+const max = 250000;
+const min = 10;
+>>>>>>> 9bffb572bbc16fef75bff6e778258834474f717a
 
 const ServiceList = () => {
   const { getService, service } = useContext(serviceContext);
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [type, setType] = useState(searchParams.get("type") || "all");
+  const [price1, setPrice1] = useState(+searchParams.get("price_gte") || +min);
+  const [price2, setPrice2] = useState(+searchParams.get("price_lte") || +max);
 
   const paramsWithType = () => {
     return {
       type: type,
       q: searchParams.get("q") || "",
+      price_gte: price1,
     };
   };
 
   const paramsNoType = () => {
     return {
       q: searchParams.get("q") || "",
+      price_gte: price1,
+      price_lte: price2,
     };
   };
 
@@ -44,7 +69,7 @@ const ServiceList = () => {
     } else {
       setSearchParams(paramsWithType());
     }
-  }, [type, searchParams]);
+  }, [type, searchParams, price1, price2]);
 
   // ! Paginate======================
   const [pageNumber, setPageNumber] = useState(0);
@@ -62,7 +87,18 @@ const ServiceList = () => {
     <>
       <MainNavbar />
       <>
-        <Filter type={type} setType={setType} />
+        <div className="filter">
+          <Filter
+            type={type}
+            setType={setType}
+            min={min}
+            max={max}
+            price1={price1}
+            setPrice1={setPrice1}
+            price2={price2}
+            setPrice2={setPrice2}
+          />
+        </div>
         <Box
           sx={{
             display: "flex",
