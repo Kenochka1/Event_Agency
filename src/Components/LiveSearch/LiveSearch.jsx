@@ -64,6 +64,7 @@ const LiveSearch = () => {
       <StyledInputBase
         placeholder="Поиск…"
         inputProps={{ "aria-label": "search" }}
+        style={{ width: 150 }}
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
       />

@@ -19,8 +19,8 @@
   line-height: 150%;
   color: white;
   display: flex;
-  margin-left: 130px;
-  margin-right: 175px;
+  margin-left: 100px;
+  margin-right: 85px;
   margin-top: 16px;
 }
 
@@ -61,7 +61,6 @@
 #lupa {
   width: 20px;
   height: 20px;
-  margin-right: 15px;
 }
 
 #user {
