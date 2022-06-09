@@ -10,9 +10,13 @@ import { Badge } from "@mui/material";
 import { cartContext } from "../Context/CartContext";
 
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { authContext } from "../Context/AuthContext";
 
 const MainNavbar = () => {
   const { cartLenght } = React.useContext(cartContext);
+
+  const { user } = React.useContext(authContext);
+  console.log(user);
   return (
     <div className="mainNavbar">
       <div className="container-navbars">
@@ -26,18 +30,17 @@ const MainNavbar = () => {
           <NavLink to="/aboutUs">
             <p className="navbar-text-p">О нас</p>
           </NavLink>{" "}
-          <NavLink to="/add">
-            <p className="navbar-text-p">Добавить</p>
-          </NavLink>
         </div>
         <img data-aos="fade-down" id="logo" src={logo} alt="logo" />
         <div data-aos="fade-left" className="navbar-controllers">
           <img id="lupa" src={lupa} alt="lupa" />
 
           <LiveSearch />
-          <NavLink to="/login">
-            <img id="user" src={user} alt="user" />
-          </NavLink>
+          {user.email === "admin@gmail.com" ? (
+            <NavLink to="/add">
+              <p className="navbar-text-p">Добавить</p>
+            </NavLink>
+          ) : null}
           <NavLink to="/cart">
             <Badge id="shop" badgeContent={cartLenght} color="error">
               <ShoppingCartIcon />
