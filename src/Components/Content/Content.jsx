@@ -14,12 +14,12 @@ const Content = () => {
       <div>
         <div className="container-advice">
           <div className="advice-text">
-            <p>Полезные статьи</p>
-            <h4>Лучшие советы по подбору ресторана</h4>
+            <p data-aos="fade-right">Полезные статьи</p>
+            <h4 data-aos="fade-right">Лучшие советы по подбору ресторана</h4>
           </div>
           {/* bootstrap cards  */}
           <div className="advice-container-card">
-            <div className="advice-cards">
+            <div data-aos="fade-up-left" className="advice-cards">
               <Card
                 id="cards-content"
                 style={{
@@ -37,7 +37,7 @@ const Content = () => {
                 </Card.Body>
               </Card>
             </div>
-            <div className="advice-cards">
+            <div data-aos="fade-up-left" className="advice-cards">
               <Card
                 id="cards-content"
                 style={{
@@ -55,7 +55,7 @@ const Content = () => {
                 </Card.Body>
               </Card>
             </div>
-            <div className="advice-cards">
+            <div data-aos="fade-up-left" className="advice-cards">
               <Card
                 id="cards-content"
                 style={{
@@ -82,12 +82,12 @@ const Content = () => {
         {/* advice finish */}
         {/* social start */}
         <div className="container-social">
-          <div className="social-text">
+          <div data-aos="fade-left" className="social-text">
             <p>#shattykEvent</p>
             <h4>Мы в социальных сетях</h4>
           </div>
           <div className="container-video">
-            <video autoPlay loop muted>
+            <video data-aos="zoom-in-up" autoPlay loop muted>
               <source id="video" width={700} src={video} type="video/mp4" />
             </video>
           </div>
@@ -95,7 +95,7 @@ const Content = () => {
         {/* social finish */}
 
         {/* content start */}
-        <div className="container-content">
+        <div data-aos="fade-up" className="container-content">
           <div className="content-text">
             <h6>Не знаете, кого выбрать?</h6>
             <h3>Назначьте с нами встречу</h3>

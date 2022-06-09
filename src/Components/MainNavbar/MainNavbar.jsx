@@ -11,7 +11,7 @@ const MainNavbar = () => {
   return (
     <div className="mainNavbar">
       <div className="container-navbars">
-        <div className="navbar-text">
+        <div data-aos="fade-right" className="navbar-text">
           <NavLink to="/">
             <p className="navbar-text-p">Главная</p>
           </NavLink>
@@ -25,8 +25,8 @@ const MainNavbar = () => {
             <p className="navbar-text-p">Добавить</p>
           </NavLink>
         </div>
-        <img id="logo" src={logo} alt="logo" />
-        <div className="navbar-controllers">
+        <img data-aos="fade-down" id="logo" src={logo} alt="logo" />
+        <div data-aos="fade-left" className="navbar-controllers">
           <img id="lupa" src={lupa} alt="lupa" />
 
           <LiveSearch />

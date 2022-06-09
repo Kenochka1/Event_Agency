@@ -29,7 +29,7 @@ const Filter = ({
     return value;
   }
   return (
-    <div>
+    <div className="container-filter">
       <FormControl>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
@@ -38,38 +38,67 @@ const Filter = ({
           value={type}
           onChange={(e) => setType(e.target.value)}
         >
-          <FormControlLabel
-            value="Рестораны"
-            control={<Radio />}
-            label="Рестораны"
-          />
-          <FormControlLabel
-            value="Ведущие"
-            control={<Radio />}
-            label="Ведущие"
-          />
-          <FormControlLabel
-            value="Музыкальные исполнители"
-            control={<Radio />}
-            label="Музыкальные исполнители"
-          />
-          <FormControlLabel value="all" control={<Radio />} label="Фотографы" />
-          <FormControlLabel
-            value="Танцевальные группы"
-            control={<Radio />}
-            label="Танцевальные группы"
-          />
-          <FormControlLabel
-            value="Видеографы"
-            control={<Radio />}
-            label="Видеографы"
-          />
-          <FormControlLabel value="Диджеи" control={<Radio />} label="Диджеи" />
-          <FormControlLabel
-            value="Декораторы"
-            control={<Radio />}
-            label="Декораторы"
-          />
+          <button className="filter-item">
+            <FormControlLabel
+              value="Рестораны"
+              control={<Radio />}
+              label="Рестораны"
+            />
+          </button>
+          <button className="filter-item">
+            <FormControlLabel
+              value="Ведущие"
+              control={<Radio />}
+              label="Ведущие"
+            />
+          </button>
+
+          <button className="filter-item">
+            <FormControlLabel
+              value="Музыкальные исполнители"
+              control={<Radio />}
+              label="Музыкальные исполнители"
+            />
+          </button>
+
+          <button className="filter-item">
+            <FormControlLabel
+              value="Фотографы"
+              control={<Radio />}
+              label="Фотографы"
+            />
+          </button>
+
+          <button className="filter-item">
+            <FormControlLabel
+              value="Танцевальные группы"
+              control={<Radio />}
+              label="Танцевальные группы"
+            />
+          </button>
+
+          <button className="filter-item">
+            <FormControlLabel
+              value="Видеографы"
+              control={<Radio />}
+              label="Видеографы"
+            />
+          </button>
+
+          <button className="filter-item">
+            <FormControlLabel
+              value="Диджеи"
+              control={<Radio />}
+              label="Диджеи"
+            />
+          </button>
+          <button className="filter-item">
+            <FormControlLabel
+              value="Декораторы"
+              control={<Radio />}
+              label="Декораторы"
+            />
+          </button>
         </RadioGroup>
       </FormControl>
       <div>
