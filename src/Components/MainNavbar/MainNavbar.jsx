@@ -30,17 +30,18 @@ const MainNavbar = () => {
           <NavLink to="/aboutUs">
             <p className="navbar-text-p">О нас</p>
           </NavLink>{" "}
+          {user.email === "admin@gmail.com" ? (
+            <NavLink to="/add">
+              <p className="navbar-text-p">Добавить</p>
+            </NavLink>
+          ) : null}
         </div>
         <img data-aos="fade-down" id="logo" src={logo} alt="logo" />
         <div data-aos="fade-left" className="navbar-controllers">
           <img id="lupa" src={lupa} alt="lupa" />
 
           <LiveSearch />
-          {user.email === "admin@gmail.com" ? (
-            <NavLink to="/add">
-              <p className="navbar-text-p">Добавить</p>
-            </NavLink>
-          ) : null}
+
           <NavLink to="/cart">
             <Badge id="shop" badgeContent={cartLenght} color="error">
               <ShoppingCartIcon />

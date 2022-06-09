@@ -39,6 +39,7 @@ const Navbar = () => {
           <img id="lupa" src={lupa} alt="lupa" />
 
           <LiveSearch />
+
           <NavLink to="/login">
             <img id="user" src={(user, usericon)} alt="user" />
           </NavLink>
