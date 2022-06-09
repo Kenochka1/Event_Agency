@@ -6,6 +6,7 @@ import advice1 from "../../Assets/images/advice1.png";
 import advice2 from "../../Assets/images/advice2.png";
 import advice3 from "../../Assets/images/advice3.png";
 import video from "../../Assets/video/weddingvideo.mp4";
+import { NavLink } from "react-router-dom";
 
 const Content = () => {
   return (
@@ -75,7 +76,9 @@ const Content = () => {
             </div>
           </div>
           <div className="advice-button">
-            <button>Читать наш блог</button>
+            <NavLink to="/aboutUs">
+              <button data-aos="fade-up">Читать наш блог</button>
+            </NavLink>
           </div>
           {/* bootstrap cards */}
         </div>
@@ -109,7 +112,9 @@ const Content = () => {
               debitis saepe illum quaerat asperiores dolore, reiciendis
               blanditiis.
             </p>
-            <button>НАШИ УСЛУГИ</button>
+            <NavLink to="/list">
+              <button>НАШИ УСЛУГИ</button>
+            </NavLink>
           </div>
         </div>
       </div>
