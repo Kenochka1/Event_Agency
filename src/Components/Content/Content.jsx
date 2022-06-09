@@ -82,7 +82,7 @@ const Content = () => {
         {/* advice finish */}
         {/* social start */}
         <div className="container-social">
-          <div data-aos="fade-left" className="social-text">
+          <div data-aos="fade-up" className="social-text">
             <p>#shattykEvent</p>
             <h4>Мы в социальных сетях</h4>
           </div>

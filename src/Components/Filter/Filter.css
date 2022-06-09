@@ -1,3 +1,40 @@
 .FormControlLabel {
   display: flex;
 }
+
+.container-filter {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.filter-item {
+  background-color: white;
+  color: #333;
+
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  border: 1px solid #d6d6d6;
+  /* text-transform: uppercase; */
+}
+
+.filter-item:hover {
+  background-color: #333;
+  color: white;
+}
+
+.filter-item:active {
+  background-color: #333;
+  color: white;
+}
+
+.container-slider {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
