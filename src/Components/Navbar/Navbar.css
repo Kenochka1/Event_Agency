@@ -70,7 +70,7 @@ a {
   line-height: 150%;
   color: white;
   display: flex;
-  margin-left: 100px;
+  margin-left: 115px;
   margin-right: 85px;
   margin-top: 16px;
   text-decoration: none !important;
@@ -101,6 +101,12 @@ a {
 #user {
   width: 20px;
   height: 20px;
+  margin-left: 20px;
+}
+
+#shop {
+  width: 22px;
+  height: 22px;
   margin-left: 20px;
 }
 
@@ -149,6 +155,10 @@ a {
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.active .navbar-text-p {
+  color: rgb(169, 155, 75);
 }
 
 .active {
