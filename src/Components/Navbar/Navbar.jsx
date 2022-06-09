@@ -47,7 +47,10 @@ const Navbar = () => {
       </div>
       <div className="container-home">
         <h3 data-aos="fade-right">Cобытие | Ателье | Сервис</h3>
-        <button data-aos="fade-up">НАЧАТЬ СЕЙЧАС</button>
+        <NavLink to="/list">
+          <button data-aos="fade-up">НАЧАТЬ СЕЙЧАС</button>{" "}
+        </NavLink>
+
         <audio src={music}></audio>
 
         <audio id="music" controls>
