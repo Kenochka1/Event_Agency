@@ -38,12 +38,12 @@ const MainNavbar = () => {
           <NavLink to="/login">
             <img id="user" src={user} alt="user" />
           </NavLink>
+          <NavLink to="/cart">
+            <Badge id="shop" badgeContent={cartLenght} color="error">
+              <ShoppingCartIcon />
+            </Badge>
+          </NavLink>
         </div>
-        <NavLink to="/cart">
-          <Badge badgeContent={cartLenght} color="error">
-            <ShoppingCartIcon />
-          </Badge>
-        </NavLink>
       </div>
     </div>
   );
