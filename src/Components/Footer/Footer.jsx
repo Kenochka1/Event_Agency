@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div>
       {" "}
-      <div className="container-footer">
+      <div data-aos="fade-up" className="container-footer">
         {/* <div className="footer-item">
           <h5>ПОЛЕЗНЫЕ ССЫЛКИ</h5>
           <img id="line" src={line} alt="line" />

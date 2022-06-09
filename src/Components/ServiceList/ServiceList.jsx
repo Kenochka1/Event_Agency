@@ -7,15 +7,18 @@ import { NavLink, useParams, useSearchParams } from "react-router-dom";
 import { serviceContext } from "../Context/ServiceContext";
 import MainNavbar from "../MainNavbar/MainNavbar";
 import ReactPaginate from "react-paginate";
-import "./ServiceList.css";
 import Filter from "../Filter/Filter";
+import "./ServiceList.css";
+import { cartContext } from "../Context/CartContext";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { Button } from "@mui/material";
 
 const max = 250000;
 const min = 10;
 
 const ServiceList = () => {
   const { getService, service } = useContext(serviceContext);
-
+  const { addServiceToCart } = useContext(cartContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const [type, setType] = useState(searchParams.get("type") || "all");
   const [price1, setPrice1] = useState(+searchParams.get("price_gte") || +min);
@@ -56,7 +59,7 @@ const ServiceList = () => {
 
   // ! Paginate======================
   const [pageNumber, setPageNumber] = useState(0);
-  const serviceLimit = 10;
+  const serviceLimit = 3;
   const serviceVisited = pageNumber * serviceLimit;
 
   const pageCount = Math.ceil(service.length / serviceLimit);
@@ -93,7 +96,7 @@ const ServiceList = () => {
           {service
             ? service.slice(serviceVisited, sliceTwoIndex).map((item) => (
                 // <div className="container-serviceList">
-                <div>
+                <div data-aos="zoom-in-up">
                   <div
                     className="card1 text-center m-4"
                     style={{ width: "18rem", height: "250px" }}
@@ -116,6 +119,9 @@ const ServiceList = () => {
                             Просмотреть{" "}
                           </button>
                         </NavLink>
+                        <Button onClick={(e) => addServiceToCart(item)}>
+                          <AddShoppingCartIcon />
+                        </Button>
                       </div>
                     </div>
                   </div>
@@ -123,10 +129,10 @@ const ServiceList = () => {
               ))
             : null}
         </Box>
-        <div>
+        <div data-aos="zoom-in-up">
           <ReactPaginate
-            previousLabel={"Назад"}
-            nextLabel={"Вперед"}
+            previousLabel={"⮜"}
+            nextLabel={"⮞"}
             pageCount={pageCount}
             containerClassName={"paginationBttns"}
             previousLinkClassName={"previousBttn"}

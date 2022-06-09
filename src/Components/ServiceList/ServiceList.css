@@ -142,3 +142,47 @@
 .hover-effect-btn:hover .button {
   opacity: 1;
 }
+
+/* PAGINATION CSS */
+.paginationBttns {
+  width: 80%;
+  height: 10%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-left: 130px;
+  margin-bottom: 50px;
+  /* margin: 5% auto; */
+  /* width: 227px;
+  height: 51px; */
+}
+
+.paginationBttns a {
+  padding: 10%;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  /* width: 227px;
+  height: 51px; */
+
+  /* margin-left: 15px; */
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: rgb(169, 155, 75);
+}
+
+.paginationActive a {
+  color: white;
+  background-color: rgba(0, 145, 212, 0.904);
+}
+
+a:not([href]):not([class]) {
+  display: none;
+}

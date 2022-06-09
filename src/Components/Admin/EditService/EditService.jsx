@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { serviceContext } from "../../Context/ServiceContext";
+import MainNavbar from "../../MainNavbar/MainNavbar";
 import "./EditService.css";
 
 const EditService = () => {
@@ -34,59 +35,65 @@ const EditService = () => {
   };
 
   return (
-    <form onSubmit={(e) => handleSave(e)}>
-      <div className="fields">
-        <TextField
-          id="outlined-basic"
-          label="Название"
-          variant="outlined"
-          value={inpValues.title}
-          name="title"
-          onChange={(e) => handleChange(e)}
-          className="field1"
-        />
-        <TextField
-          id="outlined-basic"
-          label="Тип"
-          variant="outlined"
-          value={inpValues.type}
-          name="type"
-          onChange={(e) => handleChange(e)}
-          className="field2"
-        />
-        <TextField
-          id="outlined-basic"
-          label="Описание"
-          variant="outlined"
-          value={inpValues.description}
-          name="description"
-          onChange={(e) => handleChange(e)}
-          className="field3"
-        />
-        <TextField
-          id="outlined-basic"
-          label="Цена"
-          variant="outlined"
-          value={inpValues.price}
-          name="price"
-          onChange={(e) => handleChange(e)}
-          className="field4"
-        />
-        <TextField
-          id="outlined-basic"
-          label="Изображение"
-          variant="outlined"
-          value={inpValues.img}
-          name="img"
-          onChange={(e) => handleChange(e)}
-          className="field5"
-        />
+    <>
+      <MainNavbar />
+      <div className="container-service-inputs">
+        <form onSubmit={(e) => handleSave(e)}>
+          <div className="fields">
+            <TextField
+              id="outlined-basic"
+              label="Название"
+              sx={{ color: "red" }}
+              variant="outlined"
+              value={inpValues.title}
+              name="title"
+              onChange={(e) => handleChange(e)}
+              className="field1"
+            />
+            <TextField
+              id="outlined-basic"
+              label="Тип"
+              variant="outlined"
+              value={inpValues.type}
+              name="type"
+              onChange={(e) => handleChange(e)}
+              className="field2"
+            />
+            <TextField
+              id="outlined-basic"
+              label="Описание"
+              variant="outlined"
+              value={inpValues.description}
+              name="description"
+              onChange={(e) => handleChange(e)}
+              className="field3"
+            />
+            <TextField
+              id="outlined-basic"
+              label="Цена"
+              variant="outlined"
+              value={inpValues.price}
+              name="price"
+              onChange={(e) => handleChange(e)}
+              className="field4"
+            />
+            <TextField
+              id="outlined-basic"
+              label="Изображение"
+              variant="outlined"
+              value={inpValues.img}
+              name="img"
+              onChange={(e) => handleChange(e)}
+              className="field5"
+            />
 
-        <Button type="submit" variant="contained" className="btnSave">
-          Редактировать
-        </Button>
+            <Button type="submit" variant="contained" className="btnSave">
+              Редактировать
+            </Button>
+          </div>
+        </form>
       </div>
-    </form>
+    </>
   );
 };
 

@@ -122,7 +122,7 @@ const AddService = () => {
               variant="contained"
               className="btnSave"
             >
-              Save
+              Добавить
             </Button>
             <ToastContainer
               position="top-center"

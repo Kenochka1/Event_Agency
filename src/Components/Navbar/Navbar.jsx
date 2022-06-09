@@ -6,15 +6,17 @@ import user from "../../Assets/images/user.svg";
 import heart from "../../Assets/images/heart.svg";
 import music from "../../Assets/music/sugar.mp3";
 import { NavLink } from "react-router-dom";
-import { Form, FormControl } from "react-bootstrap";
 import LiveSearch from "../LiveSearch/LiveSearch";
-import { Button } from "@mui/material";
+import { Badge } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { cartContext } from "../Context/CartContext";
 
 const Navbar = () => {
+  const { cartLenght } = React.useContext(cartContext);
   return (
     <div className="container-header">
       <div className="container-navbar">
-        <div className="navbar-text">
+        <div data-aos="fade-right" className="navbar-text">
           <NavLink to="/">
             <p className="navbar-text-p">Главная</p>
           </NavLink>
@@ -28,21 +30,24 @@ const Navbar = () => {
             <p className="navbar-text-p">Добавить</p>
           </NavLink>
         </div>
-        <img id="logo" src={logo} alt="logo" />
-        <div className="navbar-controllers">
+        <img data-aos="fade-down" id="logo" src={logo} alt="logo" />
+        <div data-aos="fade-left" className="navbar-controllers">
           <img id="lupa" src={lupa} alt="lupa" />
 
           <LiveSearch />
           <NavLink to="/login">
-            <p id="vhod">Вход / Регистрация</p>
+            <img id="user" src={user} alt="user" />
           </NavLink>
-          <img id="user" src={user} alt="user" />
-          <img id="heart" src={heart} alt="heart" />
         </div>
+        <NavLink to="/cart">
+          <Badge badgeContent={cartLenght} color="error">
+            <ShoppingCartIcon />
+          </Badge>
+        </NavLink>
       </div>
       <div className="container-home">
-        <h3>Cобытие | Ателье | Сервис</h3>
-        <button>НАЧАТЬ СЕЙЧАС</button>
+        <h3 data-aos="fade-right">Cобытие | Ателье | Сервис</h3>
+        <button data-aos="fade-up">НАЧАТЬ СЕЙЧАС</button>
         <audio src={music}></audio>
 
         <audio id="music" controls>
