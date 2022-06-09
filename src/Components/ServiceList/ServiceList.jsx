@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import { Filter } from "@mui/icons-material";
-=======
-import {
-  Button,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-} from "@mui/material";
->>>>>>> 9bffb572bbc16fef75bff6e778258834474f717a
 import { Box } from "@mui/system";
 import React from "react";
 import { useState } from "react";
@@ -21,14 +7,11 @@ import { NavLink, useParams, useSearchParams } from "react-router-dom";
 import { serviceContext } from "../Context/ServiceContext";
 import MainNavbar from "../MainNavbar/MainNavbar";
 import ReactPaginate from "react-paginate";
-<<<<<<< HEAD
 import "./ServiceList.css";
-=======
 import Filter from "../Filter/Filter";
 
 const max = 250000;
 const min = 10;
->>>>>>> 9bffb572bbc16fef75bff6e778258834474f717a
 
 const ServiceList = () => {
   const { getService, service } = useContext(serviceContext);
