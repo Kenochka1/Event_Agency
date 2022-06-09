@@ -1,9 +1,16 @@
+.container-service-inputs {
+  font-family: "Gilroy";
+  width: 100%;
+  background-image: url("../../../Assets/images3/backimage.jpg");
+  background: rgba(0, 0, 0, 0.752);
+}
+
 .fields {
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 10px;
-  margin-top: 40px;
+  padding-top: 40px;
 }
 
 .field1 {
@@ -36,4 +43,13 @@
   height: 50px;
   margin-top: 40px !important;
   margin-bottom: 40px !important;
+}
+
+#outlined-basic {
+  color: #333;
+  background-color: white;
+}
+
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
+  color: rgb(169, 155, 75);
 }

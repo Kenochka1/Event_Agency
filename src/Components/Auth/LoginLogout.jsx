@@ -18,6 +18,8 @@ import React from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { authContext } from "../Context/AuthContext";
+import welcome from "../../Assets/images3/welcome.svg";
+import back from "../../Assets/images3/backimage.jpg";
 
 function Copyright(props) {
   return (
@@ -73,10 +75,11 @@ export default function LoginLogout() {
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <LockOutlinedIcon />
+            <img src={welcome} alt="welcome" />
+            {/* <LockOutlinedIcon /> */}
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Добро пожаловать!
           </Typography>
           <Box component="form" noValidate sx={{ mt: 1 }}>
             <TextField
@@ -84,7 +87,7 @@ export default function LoginLogout() {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Email адрес"
               name="email"
               autoComplete="email"
               helperText={emailError}
@@ -97,7 +100,7 @@ export default function LoginLogout() {
               required
               fullWidth
               name="password"
-              label="Password"
+              label="Введите пароль"
               type="password"
               id="password"
               helperText={passwordError}
@@ -107,7 +110,7 @@ export default function LoginLogout() {
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              label="Запомнить меня"
             />
 
             {hasAccount ? (
@@ -118,7 +121,7 @@ export default function LoginLogout() {
                 sx={{ mt: 3, mb: 2 }}
                 onClick={signIn}
               >
-                Sign In
+                Войти
               </Button>
             ) : (
               <Button
@@ -128,7 +131,7 @@ export default function LoginLogout() {
                 sx={{ mt: 3, mb: 2 }}
                 onClick={handleSignUp}
               >
-                Sign Up
+                Войти
               </Button>
             )}
 
@@ -140,7 +143,7 @@ export default function LoginLogout() {
                     href="#"
                     variant="body2"
                   >
-                    {"Don't have an account? Sign Up"}
+                    {"Нету аккаунта? Зарегистрируйтесь"}
                   </Link>
                 ) : (
                   <Link
@@ -148,7 +151,7 @@ export default function LoginLogout() {
                     href="#"
                     variant="body2"
                   >
-                    {"Have an account? Sign In"}
+                    {"Есть аккаунт? Войдите"}
                   </Link>
                 )}
               </Grid>
