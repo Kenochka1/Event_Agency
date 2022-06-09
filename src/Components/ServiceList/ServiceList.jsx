@@ -59,7 +59,7 @@ const ServiceList = () => {
 
   // ! Paginate======================
   const [pageNumber, setPageNumber] = useState(0);
-  const serviceLimit = 3;
+  const serviceLimit = 8;
   const serviceVisited = pageNumber * serviceLimit;
 
   const pageCount = Math.ceil(service.length / serviceLimit);
