@@ -9,13 +9,16 @@ import MainNavbar from "../MainNavbar/MainNavbar";
 import ReactPaginate from "react-paginate";
 import Filter from "../Filter/Filter";
 import "./ServiceList.css";
+import { cartContext } from "../Context/CartContext";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { Button } from "@mui/material";
 
 const max = 250000;
 const min = 10;
 
 const ServiceList = () => {
   const { getService, service } = useContext(serviceContext);
-
+  const { addServiceToCart } = useContext(cartContext);
   const [searchParams, setSearchParams] = useSearchParams();
   const [type, setType] = useState(searchParams.get("type") || "all");
   const [price1, setPrice1] = useState(+searchParams.get("price_gte") || +min);
@@ -116,6 +119,9 @@ const ServiceList = () => {
                             Просмотреть{" "}
                           </button>
                         </NavLink>
+                        <Button onClick={(e) => addServiceToCart(item)}>
+                          <AddShoppingCartIcon />
+                        </Button>
                       </div>
                     </div>
                   </div>

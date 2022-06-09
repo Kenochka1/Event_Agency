@@ -6,8 +6,13 @@ import user from "../../Assets/images/user.svg";
 import heart from "../../Assets/images/heart.svg";
 import "./MainNavbar.css";
 import LiveSearch from "../LiveSearch/LiveSearch";
+import { Badge } from "@mui/material";
+import { cartContext } from "../Context/CartContext";
+
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const MainNavbar = () => {
+  const { cartLenght } = React.useContext(cartContext);
   return (
     <div className="mainNavbar">
       <div className="container-navbars">
@@ -31,11 +36,14 @@ const MainNavbar = () => {
 
           <LiveSearch />
           <NavLink to="/login">
-            <p id="vhod">Вход / Регистрация</p>
+            <img id="user" src={user} alt="user" />
           </NavLink>
-          <img id="user" src={user} alt="user" />
-          <img id="heart" src={heart} alt="heart" />
         </div>
+        <NavLink to="/cart">
+          <Badge badgeContent={cartLenght} color="error">
+            <ShoppingCartIcon />
+          </Badge>
+        </NavLink>
       </div>
     </div>
   );

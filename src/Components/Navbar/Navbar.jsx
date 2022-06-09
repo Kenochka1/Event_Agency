@@ -7,8 +7,12 @@ import heart from "../../Assets/images/heart.svg";
 import music from "../../Assets/music/sugar.mp3";
 import { NavLink } from "react-router-dom";
 import LiveSearch from "../LiveSearch/LiveSearch";
+import { Badge } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { cartContext } from "../Context/CartContext";
 
 const Navbar = () => {
+  const { cartLenght } = React.useContext(cartContext);
   return (
     <div className="container-header">
       <div className="container-navbar">
@@ -32,11 +36,14 @@ const Navbar = () => {
 
           <LiveSearch />
           <NavLink to="/login">
-            <p id="vhod">Вход / Регистрация</p>
+            <img id="user" src={user} alt="user" />
           </NavLink>
-          <img id="user" src={user} alt="user" />
-          <img id="heart" src={heart} alt="heart" />
         </div>
+        <NavLink to="/cart">
+          <Badge badgeContent={cartLenght} color="error">
+            <ShoppingCartIcon />
+          </Badge>
+        </NavLink>
       </div>
       <div className="container-home">
         <h3 data-aos="fade-right">Cобытие | Ателье | Сервис</h3>

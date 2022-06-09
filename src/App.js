@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import MainRoutes from "./MainRoutes";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import CartContextProvider from "./Components/Context/CartContext";
 
 const App = () => {
   useEffect(() => {
@@ -16,8 +17,10 @@ const App = () => {
       <BrowserRouter>
         <AuthContextProvider>
           <ServiceContextProvider>
-            <MainRoutes />
-            <Footer />
+            <CartContextProvider>
+              <MainRoutes />
+              <Footer />
+            </CartContextProvider>
           </ServiceContextProvider>
         </AuthContextProvider>
       </BrowserRouter>
