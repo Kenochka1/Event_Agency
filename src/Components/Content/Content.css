@@ -9,8 +9,9 @@
 
 .advice-container-card {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
+
 .advice-cards {
   max-height: 300px;
   display: flex;

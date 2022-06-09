@@ -4,7 +4,7 @@
 
 .container-filter {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
 
 .filter-item {
