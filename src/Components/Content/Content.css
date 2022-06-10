@@ -200,7 +200,7 @@ video {
   }
 
   #advice-text {
-    font-size: 17px !important;
+    font-size: 17px;
   }
 
   .social-text p {
@@ -212,8 +212,103 @@ video {
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media all and (max-width: 426px) {
   video {
     width: 300px;
+    height: 200px;
+  }
+
+  .advice-container-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .advice-cards {
+    margin-top: 20px;
+  }
+
+  .content-text p {
+    font-size: 13px;
+  }
+
+  .advice-text {
+    margin-top: 20px;
+  }
+
+  .advice-text p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .advice-text h4 {
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .social-text p {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-text h4 {
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .content-text h6 {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .content-text h3 {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .content-text p {
+    margin: 0;
+    padding: 0;
+  }
+
+  #advice-text {
+    font-size: 14px;
+    margin-top: 60px;
+  }
+
+  #cards-content {
+    height: 150px !important;
+  }
+
+  .card-body {
+    height: 150px;
+  }
+
+  .advice-button {
+    display: none;
+  }
+
+  .container-content {
+    height: 400px;
+  }
+
+  .content-text button {
+    width: 150px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 376px) {
+  #video {
+    width: 200px;
+  }
+  .container-content button {
+    display: none;
   }
 }

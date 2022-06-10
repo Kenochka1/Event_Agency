@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../Assets/images/logo.PNG";
 import lupa from "../../Assets/images/lupa.svg";
-import user from "../../Assets/images/user.svg";
+import usericon from "../../Assets/images/user.svg";
 import heart from "../../Assets/images/heart.svg";
 import "./MainNavbar.css";
 import LiveSearch from "../LiveSearch/LiveSearch";
@@ -41,6 +41,10 @@ const MainNavbar = () => {
           <img id="lupa" src={lupa} alt="lupa" />
 
           <LiveSearch />
+
+          <NavLink to="/login">
+            <img id="user" src={(user, usericon)} alt="user" />
+          </NavLink>
 
           <NavLink to="/cart">
             <Badge id="shop" badgeContent={cartLenght} color="error">
