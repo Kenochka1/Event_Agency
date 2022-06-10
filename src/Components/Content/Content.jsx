@@ -25,7 +25,7 @@ const Content = () => {
                 id="cards-content"
                 style={{
                   width: "18rem",
-                  height: "300px",
+                  height: "18rem",
                   backgroundImage: `url(${advice1})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -43,7 +43,7 @@ const Content = () => {
                 id="cards-content"
                 style={{
                   width: "18rem",
-                  height: "300px",
+                  height: "18rem",
                   backgroundImage: `url(${advice2})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -61,7 +61,7 @@ const Content = () => {
                 id="cards-content"
                 style={{
                   width: "18rem",
-                  height: "300px",
+                  height: "18rem",
                   backgroundImage: `url(${advice3})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",

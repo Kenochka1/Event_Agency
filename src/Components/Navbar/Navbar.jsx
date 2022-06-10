@@ -28,11 +28,14 @@ const Navbar = () => {
           <NavLink to="/aboutUs">
             <p className="navbar-text-p">О нас</p>
           </NavLink>
-          {user.email === "admin@gmail.com" ? (
+          {/* {user.email === "admin@gmail.com" ? (
             <NavLink to="/add">
               <p className="navbar-text-p">Добавить</p>
             </NavLink>
-          ) : null}
+          ) : null} */}
+          <NavLink to="/add">
+            <p className="navbar-text-p">Добавить</p>
+          </NavLink>
         </div>
         <img data-aos="fade-down" id="logo" src={logo} alt="logo" />
         <div data-aos="fade-left" className="navbar-controllers">
