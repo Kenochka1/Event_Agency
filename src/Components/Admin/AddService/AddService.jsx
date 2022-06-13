@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Button, TextField } from "@mui/material";
-import { toast, ToastContainer } from "react-toastify";
+// import { toast, ToastContainer } from "react-toastify";
 import { serviceContext } from "../../Context/ServiceContext";
+// import "react-toastify/dist/ReactToastify.css";
 import "./AddService.css";
 import MainNavbar from "../../MainNavbar/MainNavbar";
 import { authContext } from "../../Context/AuthContext";
@@ -18,17 +19,17 @@ const AddService = () => {
   const [inpValues, setInpValues] = useState(initObj);
   const { user } = useContext(authContext);
 
-  const alertToastify = () => {
-    toast.error("Заполните все поля!", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-    });
-  };
+  // const alertToastify = () => {
+  //   toast.error("Заполните все поля!", {
+  //     position: "top-center",
+  //     autoClose: 5000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: false,
+  //     draggable: true,
+  //     progress: undefined,
+  //   });
+  // };
   const handleChange = (e) => {
     let obj = {
       ...inpValues,
@@ -48,7 +49,8 @@ const AddService = () => {
       inpValues.price.toString().trim() === "" ||
       inpValues.img.trim() === ""
     ) {
-      alertToastify();
+      // alertToastify();
+      alert("Заполните все поля");
       return;
     }
     e.preventDefault();
@@ -58,7 +60,7 @@ const AddService = () => {
   return (
     <>
       <MainNavbar />
-      {user.email === "admin@gmail.com" ? (
+      {user.email === "adminuser@gmail.com" ? (
         <form className="inp" onSubmit={(e) => handleSave(e)}>
           <div className="inputs">
             <div>
@@ -127,7 +129,7 @@ const AddService = () => {
               >
                 Добавить
               </Button>
-              <ToastContainer
+              {/* <ToastContainer
                 position="top-center"
                 autoClose={5000}
                 hideProgressBar={false}
@@ -137,7 +139,7 @@ const AddService = () => {
                 pauseOnFocusLoss
                 draggable
                 pauseOnHover
-              />
+              /> */}
             </div>
           </div>
         </form>
