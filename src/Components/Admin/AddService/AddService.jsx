@@ -19,17 +19,6 @@ const AddService = () => {
   const [inpValues, setInpValues] = useState(initObj);
   const { user } = useContext(authContext);
 
-  // const alertToastify = () => {
-  //   toast.error("Заполните все поля!", {
-  //     position: "top-center",
-  //     autoClose: 5000,
-  //     hideProgressBar: false,
-  //     closeOnClick: true,
-  //     pauseOnHover: false,
-  //     draggable: true,
-  //     progress: undefined,
-  //   });
-  // };
   const handleChange = (e) => {
     let obj = {
       ...inpValues,
@@ -49,7 +38,6 @@ const AddService = () => {
       inpValues.price.toString().trim() === "" ||
       inpValues.img.trim() === ""
     ) {
-      // alertToastify();
       alert("Заполните все поля");
       return;
     }

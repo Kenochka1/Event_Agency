@@ -43,7 +43,7 @@ const Cart = () => {
                       <td>
                         <img
                           data-aos="fade-right"
-                          className="elem-img"
+                            className="elem-img"
                           width={200}
                           src={elem.item.img}
                           alt="phone"

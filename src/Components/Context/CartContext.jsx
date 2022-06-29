@@ -24,6 +24,7 @@ const reducer = (state = INIT_STATE, action) => {
       return state;
   }
 };
+
 const CartContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
@@ -35,11 +36,13 @@ const CartContextProvider = ({ children }) => {
         totalPrice: 0,
       };
     }
+
     let newService = {
       item: serviceItem,
       count: 1,
       subPrice: 0,
     };
+
     let filterCart = cart.service.filter((elem) => {
       return elem.item.id === serviceItem.id;
     });
