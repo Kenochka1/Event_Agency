@@ -28,11 +28,7 @@ const Navbar = () => {
           <NavLink to="/aboutUs">
             <p className="navbar-text-p">О нас</p>
           </NavLink>
-          {/* {user.email === "admin@gmail.com" ? (
-            <NavLink to="/add">
-              <p className="navbar-text-p">Добавить</p>
-            </NavLink>
-          ) : null} */}
+
           <NavLink to="/add">
             <p className="navbar-text-p">Добавить</p>
           </NavLink>

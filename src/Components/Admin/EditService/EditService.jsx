@@ -9,8 +9,9 @@ import MainNavbar from "../../MainNavbar/MainNavbar";
 import "./EditService.css";
 
 const EditService = () => {
-  const { serviceDetails, getServiceDetails, editService } =
-    useContext(serviceContext);
+  const { serviceDetails, getServiceDetails, editService } = useContext(
+    serviceContext
+  );
 
   let { id } = useParams();
   const navigate = useNavigate();
@@ -33,6 +34,7 @@ const EditService = () => {
     editService(id, inpValues);
     navigate("/list");
   };
+  console.log(inpValues);
 
   return (
     <>

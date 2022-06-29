@@ -12,8 +12,9 @@ import trash from "../../Assets/images3/trash.svg";
 import edit from "../../Assets/images3/edit.svg";
 
 const ServiceDetails = () => {
-  const { serviceDetails, getServiceDetails, deleteService } =
-    useContext(serviceContext);
+  const { serviceDetails, getServiceDetails, deleteService } = useContext(
+    serviceContext
+  );
   let { id } = useParams();
   useEffect(() => {
     getServiceDetails(id);

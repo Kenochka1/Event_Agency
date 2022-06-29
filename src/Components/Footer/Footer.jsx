@@ -15,14 +15,6 @@ const Footer = () => {
     <div>
       {" "}
       <div data-aos="fade-up" className="container-footer">
-        {/* <div className="footer-item">
-          <h5>ПОЛЕЗНЫЕ ССЫЛКИ</h5>
-          <img id="line" src={line} alt="line" />
-          <p id="item1">
-            Акции <br /> Оплата <br /> Политика конфедициальности
-          </p>
-        </div> */}
-
         <div className="footer-item">
           <h5>ОПЛАТА</h5>
           <img id="line" src={line} alt="line" />
